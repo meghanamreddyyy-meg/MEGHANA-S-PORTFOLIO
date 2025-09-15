@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>M Meghana — Portfolio</title>
+  <meta name="description" content="Portfolio of M Meghana — BE CSE student passionate about AI and web development." />
+  <style>
+    :root{
+      --bg: #0f1724;
+      --card: #0b1220;
+      --muted: #94a3b8;
+      --accent: #6ee7b7;
+      --glass: rgba(255,255,255,0.04);
+      --radius: 14px;
+      color-scheme: dark;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#071124 0%, var(--bg) 100%);color:#e6eef6}
+    a{color:var(--accent);text-decoration:none}
+    .container{max-width:1100px;margin:36px auto;padding:28px}
+
+    header{display:flex;gap:20px;align-items:center}
+    .avatar{width:110px;height:110px;border-radius:18px;background:linear-gradient(135deg,#0ea5a9, #7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:36px;color:#061118;box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+    .intro{flex:1}
+    h1{margin:0;font-size:28px}
+    .sub{color:var(--muted);margin-top:6px;font-size:14px}
+    .contact{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .pill{background:var(--glass);padding:8px 12px;border-radius:999px;font-size:13px;color:var(--muted)}
+
+    main{display:grid;grid-template-columns:1fr 360px;gap:26px;margin-top:26px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:var(--radius);box-shadow:0 6px 30px rgba(2,6,23,0.6)}
+
+    /* left column */
+    .section{margin-bottom:18px}
+    .section h2{margin:0 0 10px 0;font-size:18px}
+    .objective p{color:var(--muted);line-height:1.5;margin:0}
+
+    .skills{display:flex;flex-wrap:wrap;gap:10px}
+    .skill{background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:10px;font-size:13px}
+
+    .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+    .proj{padding:12px;border-radius:12px;background:rgba(255,255,255,0.02);cursor:pointer;transition:transform .18s, box-shadow .18s}
+    .proj:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+    .proj h3{margin:0;font-size:16px}
+    .proj p{margin:8px 0 0 0;color:var(--muted);font-size:13px}
+
+    .timeline{display:flex;flex-direction:column;gap:10px}
+    .edu{display:flex;justify-content:space-between;gap:10px}
+    .edu-left{max-width:70%}
+    .meta{color:var(--muted);font-size:13px}
+
+    /* right column */
+    aside{position:sticky;top:28px}
+    .card .title{display:flex;justify-content:space-between;align-items:center}
+    .lang-list{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+
+    footer{margin-top:26px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* modal */
+    .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:linear-gradient(180deg, rgba(2,6,23,0.6), rgba(2,6,23,0.85));z-index:60}
+    .modal.open{display:flex}
+    .modal-card{width:min(880px,94%);background:#071126;padding:20px;border-radius:12px}
+    .modal-card h3{margin-top:0}
+    .close{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:8px;color:var(--muted);cursor:pointer}
+
+    /* responsive */
+    @media (max-width:900px){main{grid-template-columns:1fr} aside{position:relative;top:auto} .avatar{width:86px;height:86px;font-size:28px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="avatar">MM</div>
+      <div class="intro">
+        <h1>M Meghana</h1>
+        <div class="sub">BE CSE — Cambridge Institute of Technology, Bangalore (VTU) — Passionate about AI & Web</div>
+        <div class="contact">
+          <div class="pill">📞 +91-8660539279</div>
+          <div class="pill">✉️ <a href="mailto:meghanareddym22@gmail.com">meghanareddym22@gmail.com</a></div>
+          <div class="pill">🎓 BE CSE (2021 - 2025) — CGPA / 7.5</div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="card objective section">
+          <h2>Objective</h2>
+          <p>As a college intern, I'm passionate about AI's transformative potential, especially for Generation AI. With a background in computer science and engineering, I'm keen to contribute to AI-driven projects. I'm eager to learn from experienced professionals and offer fresh insights shaped by my upbringing in the digital age.</p>
+        </div>
+
+        <div class="card section">
+          <h2>Skills</h2>
+          <div style="margin-bottom:8px" class="meta">Technical</div>
+          <div class="skills">
+            <div class="skill">Python</div>
+            <div class="skill">Java</div>
+            <div class="skill">C</div>
+            <div class="skill">SQL</div>
+            <div class="skill">Angular</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+          </div>
+          <div style="margin-top:12px" class="meta">Soft skills</div>
+          <div class="skills" style="margin-top:6px">
+            <div class="skill">Communication</div>
+            <div class="skill">Teamwork</div>
+            <div class="skill">Problem Solving</div>
+            <div class="skill">Public Speaking</div>
+            <div class="skill">Leadership</div>
+          </div>
+          <div style="margin-top:12px" class="meta">Languages</div>
+          <div class="skills" style="margin-top:6px">
+            <div class="skill">English (Fluent)</div>
+            <div class="skill">Kannada (Fluent)</div>
+            <div class="skill">Telugu (Fluent)</div>
+          </div>
+        </div>
+
+        <div class="card section">
+          <h2>Projects</h2>
+          <div class="projects-grid">
+            <div class="proj" data-project="p1">
+              <h3>Police Database Management System</h3>
+              <p>Jan 2024 – Mar 2024 · Tkinter, SQL, Python — Centralized interface for officer & case management with privacy and security.</p>
+            </div>
+
+            <div class="proj" data-project="p2">
+              <h3>Weather Detection System</h3>
+              <p>Jun 2024 – Aug 2024 · Sensors & algorithms — Real-time temperature, humidity and precipitation data for farmers & emergency services.</p>
+            </div>
+
+            <div class="proj" data-project="p3">
+              <h3>Boat Under Bridge Simulation (OpenGL)</h3>
+              <p>Jun 2024 – Aug 2024 · Computer graphics simulation of a bascule bridge using OpenGL functions.</p>
+            </div>
+
+            <div class="proj" data-project="p4">
+              <h3>A Hybrid Approach to Detect DDoS Attack</h3>
+              <p>Dec 2024 – Feb 2025 · Random Forest + Decision Tree, PCA feature selection, tested on CICDDoS2019 for higher precision & recall.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card section">
+          <h2>Extracurricular</h2>
+          <div class="meta">Event Organizer — College Fest (2022 – 2025)</div>
+          <p style="color:var(--muted);margin-top:8px">Successfully organized a college fest with 3000+ participants. Managed logistics end-to-end: scheduling, coordination, resource allocation and team leadership. Skills gained: event planning, leadership, public speaking.</p>
+          <p style="margin-top:10px;color:var(--accent);font-weight:600">Winner — TechXcite-MAZZEE (HTML, CSS, JavaScript)</p>
+        </div>
+
+        <div class="card section">
+          <h2>Education</h2>
+          <div class="timeline">
+            <div class="edu">
+              <div class="edu-left">
+                <strong>Cambridge Institute of Technology, Bangalore</strong>
+                <div class="meta">BE CSE — Visvesvaraya Technological University (VTU)</div>
+              </div>
+              <div class="meta">2021 – 2025 · CGPA 7.5</div>
+            </div>
+
+            <div class="edu">
+              <div class="edu-left">
+                <strong>Sri Maruthi PU College, Hoskote</strong>
+                <div class="meta">Class 12th — KSEAB</div>
+              </div>
+              <div class="meta">Year: 2021 · Percentage: 78%</div>
+            </div>
+
+            <div class="edu">
+              <div class="edu-left">
+                <strong>Fatima English High School, Hoskote</strong>
+                <div class="meta">Class 10th — SSLC</div>
+              </div>
+              <div class="meta">Year: 2019 · Percentage: 72.89%</div>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+      <aside>
+        <div class="card">
+          <div class="title"><strong>Quick Contact</strong><button id="cvBtn" class="close">Contact / Download</button></div>
+          <div style="margin-top:12px;color:var(--muted)">Available for internships & part-time projects. Open to web, ML & data science roles.</div>
+
+          <div style="margin-top:14px">
+            <div class="meta">Reach me</div>
+            <div class="lang-list">
+              <div class="pill">📞 +91-8660539279</div>
+              <div class="pill">✉️ <a href="mailto:meghanareddym22@gmail.com">meghanareddym22@gmail.com</a></div>
+            </div>
+          </div>
+
+          <div style="margin-top:14px">
+            <div class="meta">Short Links</div>
+            <div style="display:flex;gap:8px;margin-top:8px">
+              <a class="pill" href="mailto:meghanareddym22@gmail.com?subject=Hi%20Meghana%20-%20Internship%20Opportunity">Email Me</a>
+              <a class="pill" href="#projects">Projects</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <div class="title"><strong>Personal</strong><button id="themeToggle" class="close">Toggle Theme</button></div>
+          <div style="margin-top:10px;color:var(--muted)">Hobbies: Web development, exploring ML models, event planning.</div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      Built with ❤️ — M Meghana · Design is responsive and print-friendly (press ⌘/Ctrl+P to print as PDF).
+    </footer>
+  </div>
+
+  <!-- modal detail area -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <h3 id="modalTitle"></h3>
+        <button id="closeModal" class="close">Close</button>
+      </div>
+      <div id="modalBody" style="margin-top:12px;color:var(--muted)"></div>
+    </div>
+  </div>
+
+  <script>
+    const projects = {
+      p1: {
+        title: 'Police Database Management System',
+        body: `Jan 2024 – Mar 2024. Built using Python (Tkinter) and SQL. Designed a centralized interface for officer records and case management. Focus: data privacy, access control, and usability. Ideal for small police stations to improve response and reporting.`
+      },
+      p2: {
+        title: 'Weather Detection System',
+        body: `Jun 2024 – Aug 2024. Integrated sensors and algorithms to capture temperature, humidity, and precipitation. Implemented alerting and a centralized dashboard to help farmers and emergency teams make timely decisions.`
+      },
+      p3: {
+        title: 'Boat Under Bridge Simulation (OpenGL)',
+        body: `Jun 2024 – Aug 2024. Computer graphics simulation of a bascule bridge. Modeled mechanical lifting, counterweights, and ship-vehicle interactions. Useful as a teaching visualization for civil graphics or simulation classes.`
+      },
+      p4: {
+        title: 'A Hybrid Approach to Detect DDoS Attack',
+        body: `Dec 2024 – Feb 2025. Hybrid ML approach combining Random Forest and Decision Tree with PCA for feature selection. Evaluated on CICDDoS2019 dataset; improved precision & recall. Implemented preprocessing, feature selection, model stacking and confusion matrix analysis.`
+      }
+    }
+
+    // project modal
+    document.querySelectorAll('.proj').forEach(el=>{
+      el.addEventListener('click',()=>{
+        const id = el.dataset.project; const p = projects[id];
+        document.getElementById('modalTitle').textContent = p.title;
+        document.getElementById('modalBody').textContent = p.body;
+        const modal = document.getElementById('modal'); modal.classList.add('open'); modal.setAttribute('aria-hidden','false');
+      })
+    })
+    document.getElementById('closeModal').addEventListener('click',()=>{
+      const modal = document.getElementById('modal'); modal.classList.remove('open'); modal.setAttribute('aria-hidden','true');
+    })
+    document.getElementById('cvBtn').addEventListener('click',()=>{
+      // quick contact - opens mail client with prefilled subject
+      window.location.href = 'mailto:meghanareddym22@gmail.com?subject=Hi%20Meghana%20-%20Internship%20Opportunity&body=Hello%20Meghana%2C%0A%0AI%20saw%20your%20portfolio%20and%20would%20like%20to%20connect.';
+    })
+
+    // simple theme toggle (light/dark)
+    document.getElementById('themeToggle').addEventListener('click',()=>{
+      if(document.documentElement.style.getPropertyValue('--bg') === '#0f1724'){
+        document.documentElement.style.setProperty('--bg','#f7fafc');
+        document.documentElement.style.setProperty('--card','#ffffff');
+        document.documentElement.style.setProperty('--muted','#334155');
+        document.documentElement.style.setProperty('--accent','#0ea5a9');
+        document.documentElement.style.setProperty('--glass','rgba(0,0,0,0.04)');
+        document.documentElement.style.setProperty('color-scheme','light');
+        document.body.style.color = '#061118';
+      } else {
+        // revert
+        document.documentElement.style.setProperty('--bg','#0f1724');
+        document.documentElement.style.setProperty('--card','#0b1220');
+        document.documentElement.style.setProperty('--muted','#94a3b8');
+        document.documentElement.style.setProperty('--accent','#6ee7b7');
+        document.documentElement.style.setProperty('--glass','rgba(255,255,255,0.04)');
+        document.documentElement.style.setProperty('color-scheme','dark');
+        document.body.style.color = '#e6eef6';
+      }
+    })
+
+    // accessibility: close modal on ESC
+    document.addEventListener('keydown',(e)=>{ if(e.key==='Escape'){ document.getElementById('modal').classList.remove('open'); document.getElementById('modal').setAttribute('aria-hidden','true'); }})
+  </script>
+</body>
+</html>
